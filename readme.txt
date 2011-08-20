@@ -1,0 +1,12 @@
+name: Prank
+main: me.spike.prank.PrankPlugin
+version: 0.1
+author: SpikeMeister
+description: >
+             Prank is a plugin which consists of a number of pranks which can be played on unsuspecting players.
+commands:
+  prank:
+    description: Adds a player to the list of players to be pranked.
+    usage: |
+           /<command> [prank] [player]
+           Example: /<command> toolswitch [player] - Starts tool switch pranking "player".
