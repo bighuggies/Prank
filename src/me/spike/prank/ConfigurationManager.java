@@ -90,7 +90,13 @@ public class ConfigurationManager {
 	 * @return Whether or not the player is being pranked
 	 */
 	public boolean checkPrank(String player, String prankType) {
-		if (prop.getProperty(player + "." + prankType).equals("true")) return true;
+		String beingPranked = prop.getProperty(player.toLowerCase() + "." + prankType);
+		if (beingPranked != null) {
+			if (beingPranked.equals("true")) {
+				return true;
+			}
+		}
+		
 		return false;
 	}
 }

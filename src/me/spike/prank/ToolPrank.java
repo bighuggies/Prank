@@ -22,17 +22,21 @@ public class ToolPrank extends PlayerListener {
 	public void onPlayerInteract(PlayerInteractEvent event) {
 		Player p = event.getPlayer();
 		boolean beingPranked = config.checkPrank(p.getName(), "toolswitch");
-		
+				
 		if (beingPranked) {
 			Inventory i = p.getInventory();
 			ItemStack itemUsed = event.getItem();
 			
 			if (itemUsed != null) {
 				int emptySlot = i.firstEmpty();
-				int slotUsed = i.first(itemUsed);
+				
+				// Don't do anything if the user has a full inventory
+				if (emptySlot > 0) {
+					int slotUsed = i.first(itemUsed);
 
-				i.clear(slotUsed);
-				i.setItem(emptySlot, itemUsed);
+					i.clear(slotUsed);
+					i.setItem(emptySlot, itemUsed);
+				}
 			}
 		}
 		

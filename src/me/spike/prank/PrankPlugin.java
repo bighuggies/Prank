@@ -23,12 +23,12 @@ public class PrankPlugin extends JavaPlugin {
 		PluginManager pm = getServer().getPluginManager();
 		config.loadConfiguration();
 		
-		ToolPrank tp = new ToolPrank();
-		pm.registerEvent(Event.Type.PLAYER_INTERACT, tp, Event.Priority.Normal, this);
-
+		pm.registerEvent(Event.Type.PLAYER_INTERACT, new ToolPrank(), Event.Priority.Normal, this);
+		pm.registerEvent(Event.Type.PLAYER_MOVE, new CreeperPrank(), Event.Priority.Normal, this);
 		
 		// Get a command executor
 		getCommand("prank").setExecutor(prankExecutor);
+		getCommand("unprank").setExecutor(prankExecutor);
 
 		// Shutdown message
 		PluginDescriptionFile pdfFile = this.getDescription();
