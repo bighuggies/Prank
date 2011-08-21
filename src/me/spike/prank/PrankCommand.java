@@ -61,7 +61,7 @@ public class PrankCommand implements CommandExecutor {
 	private boolean checkPerm(CommandSender sender, String subnode) {
 		boolean permission = sender.hasPermission("prank." + subnode);
 		if (!permission) {
-			sender.sendMessage(ChatColor.RED + "You do not have permission to do that (" + subnode + ".");
+			sender.sendMessage(ChatColor.RED + "You do not have permission to do that (" + subnode + ").");
 		}
 		return permission;
 	}
