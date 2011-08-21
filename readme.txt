@@ -10,3 +10,23 @@ commands:
     usage: |
            /<command> [prank] [player]
            Example: /<command> toolswitch [player] - Starts tool switch pranking "player".
+           Example: /<command> creeper [player] - Starts creeper pranking "player".
+  unprank:
+    description: Removes a player from the list of players to be pranked.
+    usage: |
+           /<command> [prank] [player]
+           Example: /<command> toolswitch [player] - Stops tool switch pranking "player".
+           Example: /<command> creeper [player] - Stops creeper pranking "player".
+           
+permissions:
+    prank.*:
+        description: Gives access to all prank commands
+        children:
+            prank.creeper: true
+            prank.toolswitch: true
+    prank.creeper:
+        description: Allows you to creeper prank a user
+        default: op
+    prank.toolswitch:
+        description: Allows you to tool switch prank a user
+        default: op
