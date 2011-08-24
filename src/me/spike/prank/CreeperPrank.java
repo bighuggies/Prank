@@ -39,5 +39,4 @@ public class CreeperPrank extends PlayerListener {
 
 		super.onPlayerMove(event);
 	}
-
 }

@@ -25,6 +25,7 @@ public class PrankPlugin extends JavaPlugin {
 		
 		pm.registerEvent(Event.Type.PLAYER_INTERACT, new ToolPrank(), Event.Priority.Normal, this);
 		pm.registerEvent(Event.Type.PLAYER_MOVE, new CreeperPrank(), Event.Priority.Normal, this);
+		pm.registerEvent(Event.Type.ENTITY_DAMAGE, new ShockingFallPrank(), Event.Priority.Normal, this);
 		
 		// Get a command executor
 		getCommand("prank").setExecutor(prankExecutor);
