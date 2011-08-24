@@ -1,6 +1,6 @@
 name: Prank
 main: me.spike.prank.PrankPlugin
-version: 0.1
+version: 2.0
 author: SpikeMeister
 description: >
              Prank is a plugin which consists of a number of pranks which can be played on unsuspecting players.
@@ -12,7 +12,6 @@ commands:
            Example: /<command> creeper [player] - Starts creeper pranking "player".
            Example: /<command> toolswitch [player] - Starts tool switch pranking "player".
            Example: /<command> shockingfall [player] - Starts shocking fall pranking "player".
-
   unprank:
     description: Removes a player from the list of players to be pranked.
     usage: |

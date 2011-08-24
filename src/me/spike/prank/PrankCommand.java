@@ -68,9 +68,10 @@ public class PrankCommand implements CommandExecutor {
 
 	private boolean checkPrank(String prank) {
 		if (prank.equalsIgnoreCase("creeper") ||
-			prank.equalsIgnoreCase("toolswitch"))
+			prank.equalsIgnoreCase("toolswitch") ||
+			prank.equalsIgnoreCase("shockingfall"))
 			return true;
-
+			
 		return false;
 	}
 }
