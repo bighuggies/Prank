@@ -14,7 +14,7 @@ import org.bukkit.inventory.ItemStack;
  */
 public class ToolPrank extends PlayerListener {
 	private final ConfigurationManager config = ConfigurationManager.getConfigurationManager();
-	
+
 	/**
 	 * Whenever the user clicks a mouse button (interacts), switch their
 	 * equipped item into the first empty slot.
@@ -22,24 +22,23 @@ public class ToolPrank extends PlayerListener {
 	public void onPlayerInteract(PlayerInteractEvent event) {
 		Player p = event.getPlayer();
 		boolean beingPranked = config.checkPrank(p.getName(), "toolswitch");
-				
+
 		if (beingPranked) {
 			Inventory i = p.getInventory();
 			ItemStack itemUsed = event.getItem();
-			
+
 			if (itemUsed != null) {
 				int emptySlot = i.firstEmpty();
-				
-				// Don't do anything if the user has a full inventory
-				if (emptySlot > 0) {
-					int slotUsed = i.first(itemUsed);
+				System.out.println(emptySlot);
 
-					i.clear(slotUsed);
+				// Don't do anything if the user has a full inventory
+				if (!(emptySlot < 0)) {
+					p.setItemInHand(null);
 					i.setItem(emptySlot, itemUsed);
 				}
-			}
+			} 
 		}
-		
+
 		super.onPlayerInteract(event);
 	}
 }
