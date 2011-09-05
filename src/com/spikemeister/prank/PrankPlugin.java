@@ -1,4 +1,4 @@
-package me.spike.prank;
+package com.spikemeister.prank;
 
 import org.bukkit.event.Event;
 import org.bukkit.plugin.PluginDescriptionFile;
@@ -21,7 +21,7 @@ public class PrankPlugin extends JavaPlugin {
 	public void onEnable() {
 		// Get a pluginmanager
 		PluginManager pm = getServer().getPluginManager();
-		config.loadConfiguration();
+		config.loadConfigurationFromDisk();
 		
 		pm.registerEvent(Event.Type.PLAYER_INTERACT, new ToolPrank(), Event.Priority.Normal, this);
 		pm.registerEvent(Event.Type.PLAYER_MOVE, new CreeperPrank(), Event.Priority.Normal, this);

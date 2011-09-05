@@ -1,4 +1,4 @@
-package me.spike.prank;
+package com.spikemeister.prank;
 
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;

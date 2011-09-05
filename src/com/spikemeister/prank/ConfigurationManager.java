@@ -1,4 +1,4 @@
-package me.spike.prank;
+package com.spikemeister.prank;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -31,7 +31,7 @@ public class ConfigurationManager {
 	 * Saves configuration to disk in a file called prank.cfg. If no 
 	 * configuration file exists, one is created.
 	 */
-	private void saveConfiguration() {
+	private void saveConfigurationToDisk() {
 		try {
 			FileOutputStream cfgWriter = new FileOutputStream(cfg);
 			prop.store(cfgWriter, "Be careful when manually editing this file!");
@@ -48,14 +48,14 @@ public class ConfigurationManager {
 	 * Load the configuration from disk. If no configuration file exists, one is
 	 * created.
 	 */
-	public void loadConfiguration() {
+	public void loadConfigurationFromDisk() {
 		try {
 			FileInputStream cfgReader = new FileInputStream(cfg);
 			prop.load(cfgReader);
 			cfgReader.close();
 		} catch (FileNotFoundException e) {
-			saveConfiguration();
-			loadConfiguration();
+			saveConfigurationToDisk();
+			loadConfigurationFromDisk();
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -69,7 +69,7 @@ public class ConfigurationManager {
 	 */
 	public void turnPrankOn(String player, String prankType) {
 		prop.setProperty(player + "." + prankType, "true");
-		saveConfiguration();
+		saveConfigurationToDisk();
 	}
 
 	/**
@@ -80,7 +80,7 @@ public class ConfigurationManager {
 	 */
 	public void turnPrankOff(String player, String prankType) {
 		prop.setProperty(player + "." + prankType, "false");
-		saveConfiguration();
+		saveConfigurationToDisk();
 	}
 
 	/**

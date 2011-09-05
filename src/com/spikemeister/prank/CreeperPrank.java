@@ -1,4 +1,4 @@
-package me.spike.prank;
+package com.spikemeister.prank;
 
 import java.util.Random;
 

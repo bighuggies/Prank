@@ -1,4 +1,4 @@
-package me.spike.prank;
+package com.spikemeister.prank;
 
 import org.bukkit.entity.Player;
 import org.bukkit.event.player.PlayerInteractEvent;

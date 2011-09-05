@@ -1,5 +1,5 @@
 name: Prank
-main: me.spike.prank.PrankPlugin
+main: com.spikemeister.prank.PrankPlugin
 version: 2.0
 author: SpikeMeister
 description: >
