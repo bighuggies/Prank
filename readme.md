@@ -1,7 +1,9 @@
 Prank
 =====
-Author: Andrew "SpikeMeister" Hughson
-Version: 2.0 [2011/08/24]
+#### Author
+Andrew "SpikeMeister" Hughson
+#### Release Version
+2.0 [2011/08/24]
 
 Description
 -----------
