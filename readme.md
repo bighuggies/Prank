@@ -13,26 +13,26 @@ Simply extract prank.jar to your CraftBukkit plugins folder and you are done.
 
 Commands
 --------
-/prank [pranktype] [player] - Start pranking [player] with [pranktype] prank. Player can be offline or online.
-/unprank [pranktype] [player] - Stop pranking [player] with [pranktype] prank. Player can be offline or online.
+* /prank [pranktype] [player] - Start pranking [player] with [pranktype] prank. Player can be offline or online.
+* /unprank [pranktype] [player] - Stop pranking [player] with [pranktype] prank. Player can be offline or online.
 
 Pranks
 ------
-# Creeper (/prank creeper [player])
-    Randomly spawn creepers around a player! Make them wonder why god hates them so much, as they mine or build and are plagued with a stream of creepers.
+> Creeper (/prank creeper [player])
+> > Randomly spawn creepers around a player! Make them wonder why god hates them so much, as they mine or build and are plagued with a stream of creepers.
 
-# Tool Switch (/prank toolswitch [player])
-    Switch the player's currently equipped item into the first empty slot of their inventory whenever they try to use it! Frustrate the hell out of players who can't accomplish anything!
+> Tool Switch (/prank toolswitch [player])
+> > Switch the player's currently equipped item into the first empty slot of their inventory whenever they try to use it! Frustrate the hell out of players who can't accomplish anything!
 
-# Shocking Fall (/prank shockingfall [player])
-    Whenever a player takes fall damage, strike them down with lightning! This prank can lay in wait for hours before it finally strikes... a player is innocently building or exploring when they make a jump that's just a little too high and - BAM, they are either dead or burning to death. They had better pray for water!
+> Shocking Fall (/prank shockingfall [player])
+> > Whenever a player takes fall damage, strike them down with lightning! This prank can lay in wait for hours before it finally strikes... a player is innocently building or exploring when they make a jump that's just a little too high and - BAM, they are either dead or burning to death. They had better pray for water!
 
 Permissions
 -----------
-prank.*
-prank.creeper
-prank.toolswitch
-prank.shockingfall
+* prank.*
+* prank.creeper
+* prank.toolswitch
+* prank.shockingfall
 
 Changelog
 ---------
