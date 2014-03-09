@@ -1,6 +1,6 @@
 name: Prank
 main: com.spikemeister.prank.PrankPlugin
-version: 3.0
+version: 2.1
 author: SpikeMeister
 description: >
              Prank is a plugin which consists of a number of pranks which can be played on unsuspecting players.

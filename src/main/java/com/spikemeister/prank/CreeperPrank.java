@@ -4,7 +4,7 @@ import java.util.Random;
 
 import org.bukkit.World;
 import org.bukkit.block.Block;
-import org.bukkit.entity.EntityType;
+import org.bukkit.entity.Creeper;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -36,8 +36,7 @@ public class CreeperPrank implements Listener {
 			if (rand.nextDouble() < DEFAULT_PROBABILITY) {
 				World w = p.getWorld();
 				Block b = p.getTargetBlock(null, 256);
-				w.spawnCreature(b.getLocation(), EntityType.CREEPER);
-
+				w.spawn(b.getLocation(), Creeper.class);
 			}
 		}
 	}

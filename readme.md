@@ -3,7 +3,7 @@ Prank
 #### Author
 Andrew "SpikeMeister" Hughson
 #### Release Version
-2.0 [2011/08/24]
+3.1 [2014-03-09]
 
 Description
 -----------
@@ -38,6 +38,8 @@ Permissions
 
 Changelog
 ---------
+* Version 2.1
+	* Compatibility update
 * Version 2.0
 	* Re-released as "Prank"
 	* Added tool switch prank
